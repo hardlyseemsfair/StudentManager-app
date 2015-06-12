@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import contentfragments.ApplicationFragmentListener;
 import handlers.UserDBHandler;
+import util.Config;
 
 import java.util.ArrayList;
 
@@ -29,6 +30,8 @@ public class TitleBarFragment extends Fragment implements OnItemSelectedListener
     //Class variables
     ApplicationFragmentListener mCallback;
     private Spinner spinner;
+    TextView folder;
+    TextView user;
     private Button logoutButton, menuButton;
     private UserDBHandler userDB;
     ArrayList<String> directories;
@@ -50,7 +53,9 @@ public class TitleBarFragment extends Fragment implements OnItemSelectedListener
                 mCallback.onMenuClick();
             }
         });
-        setSpinnerBlock(view);
+        folder = (TextView) view.findViewById(R.id.directory);
+        user = (TextView) view.findViewById(R.id.userText);
+        //setSpinnerBlock(view);
         setLogoutButtonBlock(view);
         return view;
     }
@@ -64,6 +69,18 @@ public class TitleBarFragment extends Fragment implements OnItemSelectedListener
         directories.add("Camera");
     }
 
+    public void setDirectoryText(String t){
+        folder.setText(Config.formatGroupNameDisplay(t));
+    }
+
+    public void setUserText(String t){
+        user.setText("User: " + t);
+    }
+
+    public void setUserText(){
+
+    }
+
 
     /**
      * Creates the spinner contents
@@ -71,7 +88,7 @@ public class TitleBarFragment extends Fragment implements OnItemSelectedListener
      */
     private void setSpinnerBlock(View view){
         TextView txtUser = (TextView) view.findViewById(R.id.directoryText);
-        spinner = (Spinner) view.findViewById(R.id.directorySpinner);
+        //spinner = (Spinner) view.findViewById(R.id.directorySpinner);
         setSpinnerContents(view);
     }
 

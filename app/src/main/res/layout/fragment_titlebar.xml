@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFF8FB"
+    android:background="#b70a5cfb"
     android:orientation="horizontal" >
 
     <Button
@@ -11,19 +11,24 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="@string/menu"
-        android:background="#ffb3eadc" />
+        android:background="#6efafbff" />
 
     <TextView
         android:id="@+id/directoryText"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:layout_weight="0.17"
+        android:layout_margin="5dp"
+        android:gravity="center"
         android:text="@string/files" />
     
-    <Spinner
-        android:id="@+id/directorySpinner"
+    <TextView
+        android:id="@+id/directory"
         android:layout_width="150dp"
         android:layout_height="43dp"
+        android:layout_weight="0.17"
+        android:gravity="center|left"
+        android:layout_margin="5dp"
         android:background="#ffffff" />
     
     <View
@@ -37,6 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="28dp"
         android:layout_weight="0.17"
+        android:gravity="center"
         android:text="@string/username" />
 
     <Button
@@ -45,6 +51,6 @@
         android:layout_height="wrap_content"
         android:text="@string/logout"
         android:layout_margin="5dp"
-        android:background="#ffb3eadc" />
+        android:background="#6efafbff" />
  
 </LinearLayout>

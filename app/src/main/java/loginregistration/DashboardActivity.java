@@ -70,6 +70,10 @@ public class DashboardActivity extends FragmentActivity implements OnLoginRegist
         if (response == 0) {
             Log.i("LOGIN FRAGMENT", "Executing failed login");
             ToastMessages.longToast("Error logging in, please try again.", 30, this);
+        } else if (response == 2) {
+            Log.i("LOGIN FRAGMENT", "User is teacher, limited features");
+            ToastMessages.longToast("You are a teacher logging in to the student app. Certain features will be disabled", 30, this);
+            startApplication();
         } else {
             startApplication();
         }

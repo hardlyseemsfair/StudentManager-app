@@ -96,6 +96,7 @@ public class ApplicationActivity extends FragmentActivity implements Application
     // Bad design they should be instantiated as needed not kept around.
     private FolderViewFragment fvf;
     private ChatViewFragment cvf;
+    private TitleBarFragment tbf;
 
     // Masks for camera activities
     private static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
@@ -251,7 +252,6 @@ public class ApplicationActivity extends FragmentActivity implements Application
     @Override
     public void onRegisterDeviceComplete(ArrayList<String> result) {
         Log.v("APPLICATION ACTIVITY", "Device registration complete...");
-        Log.v("GITHUB TEST", "hndfhnedfjkhsajkhbsed");
         if (result != null) {
             usergroups = result;
             for (String dir : result) {
@@ -268,8 +268,10 @@ public class ApplicationActivity extends FragmentActivity implements Application
 
         // Create fragments
         FragmentManager fm = getFragmentManager();
-        TitleBarFragment tbf = (TitleBarFragment) fm.findFragmentById(R.id.titlebar_fragment);
-        tbf.updateAdapter(getDirectories());
+        tbf = (TitleBarFragment) fm.findFragmentById(R.id.titlebar_fragment);
+        tbf.setDirectoryText(username);
+        tbf.setUserText(username);
+//        tbf.updateAdapter(getDirectories());
         // Once groups are set, execute chat messages task
         GetUserChatMessagesTask task = new GetUserChatMessagesTask(this);
         task.execute(username);
@@ -407,6 +409,7 @@ public class ApplicationActivity extends FragmentActivity implements Application
     private void setDefaultFragment(String path) {
         fvf = FolderViewFragment.newInstance(path);
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_content, fvf).commit();
+
     }
 
     /**
@@ -537,6 +540,7 @@ public class ApplicationActivity extends FragmentActivity implements Application
         } else {
             fvf = FolderViewFragment.newInstance(path);
             sessionLog.writeLog(LogFlag.USER_ACTION, "Fragment set to folder view on folder " + fvf.getWorkingDir());
+            tbf.setDirectoryText(fvf.getWorkingDir());
             buildFolderViewFragment();
         }
     }
@@ -708,10 +712,10 @@ public class ApplicationActivity extends FragmentActivity implements Application
      */
     @Override
     public void setSpinnerEntry(String name) {
-        FragmentManager fm = getFragmentManager();
-        TitleBarFragment tbf = (TitleBarFragment) fm.findFragmentById(R.id.titlebar_fragment);
-        tbf.setSpinnerEntry(name);
-    }
+//        FragmentManager fm = getFragmentManager();
+//        TitleBarFragment tbf = (TitleBarFragment) fm.findFragmentById(R.id.titlebar_fragment);
+//        tbf.setSpinnerEntry(name);
+}
 
 
 
