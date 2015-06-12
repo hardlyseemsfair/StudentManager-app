@@ -251,7 +251,7 @@ public class ApplicationActivity extends FragmentActivity implements Application
     @Override
     public void onRegisterDeviceComplete(ArrayList<String> result) {
         Log.v("APPLICATION ACTIVITY", "Device registration complete...");
-
+        Log.v("GITHUB TEST", "hndfhnedfjkhsajkhbsed");
         if (result != null) {
             usergroups = result;
             for (String dir : result) {
