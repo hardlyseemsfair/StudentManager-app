@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.classroom.studentmanager"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude'META-INF/DEPENDENCIES'
+        exclude'META-INF/NOTICE'
+        exclude'META-INF/LICENSE'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile "com.google.android.gms:play-services:7.0.0"
+    compile files('P:/Android Projects/StudentManager/libs/httpclient-4.3.3.jar')
+    compile files('P:/Android Projects/StudentManager/libs/httpcore-4.3.jar')
+    compile files('P:/Android Projects/StudentManager/libs/httpmime-4.3.jar')
+}

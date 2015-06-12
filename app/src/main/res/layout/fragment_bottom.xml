@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF8FB"
+    android:orientation="horizontal" >
+
+	 <Button
+        android:id="@+id/cameraButton"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:text="@string/noteshot" />
+    
+    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+
+    <Button
+        android:id="@+id/chatButton"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_group_chat" />
+ 
+</LinearLayout>

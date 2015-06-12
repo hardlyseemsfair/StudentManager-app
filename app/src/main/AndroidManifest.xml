@@ -1,0 +1,72 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.classroom.applicationactivity">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+
+    <!-- Permissions -->
+    <!-- Allow to connect with internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Allow to device read and write -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Camera permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Allow camera use -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <!-- Allow audio recording -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Allow gcm accounts -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Allow wake lock -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Allow GCM message reciever -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- Application specific C2D permissions -->
+    <!-- Application recieve GCM permission -->
+    <permission android:name="com.classroom.applicationactivity.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <!-- User recieve GCM permission -->
+    <uses-permission android:name="com.classroom.applicationactivity.permission.C2D_MESSAGE" />
+
+
+    <application android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
+
+        <!-- Register dashboard activity as entry point-->
+        <activity
+            android:name="loginregistration.DashboardActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- GCM Reciever -->
+        <receiver android:name="handlers.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.classroom.applicationactivity" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Gcm Intent service -->
+        <service android:name="services.GcmIntentService" />
+
+        <!-- Register Application activity -->
+        <activity android:name=".ApplicationActivity" android:label="Show Folder Views" android:screenOrientation="portrait" />
+
+        <!-- Filemonitoring service -->
+        <service android:name="services.FileMonitorService" android:exported="false" />
+
+        <!-- File Sync service -->
+        <service android:name="services.FullFileSyncService" android:exported="false" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">StudentManager</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu">Menu</string>
+    <string name="logout">Logout</string>
+    <string name="username">User: </string>
+    <string name="files">Files: </string>
+    <string name="noteshot">Note shot </string>
+
+
+    <!-- Values for GroupChatButton -->
+    <string name="button_group_chat">Group Chat </string>
+    <string name="button_view_folders">View folders </string>
+
+
+    <!-- SelectGroupDialog -->
+    <string name="dialog_select_group_title">Select chat group </string>
+
+    <!-- Values for FileSelectedDialog -->
+    <string name="file_select_options_title">Pick action </string>
+
+    <string-array name="file_select_dialog_options">
+        <item>Open File</item>
+        <item>Get Help</item>
+        <item>Move or Copy File</item>
+        <item>Rename File</item>
+        <item>Delete</item>
+    </string-array>
+
+    <!-- Values for FileHelpDialog -->
+    <string name="file_help_options_title">Enter value and note </string>
+
+    <!-- Values for FileDeleteDialog -->
+    <string name="file_delete_title">Delete File </string>
+    <string name="file_delete_message">Are you sure? Deleted files can not be recovered&#8230; </string>
+
+    <!-- Values for MoveCopyFileDialog -->
+    <string name="copy_move_file_select_options_title">Pick action </string>
+
+    <string-array name="file__move_copy_dialog_options">
+        <item>Move File</item>
+        <item>Copy File</item>
+    </string-array>
+
+    <!-- Values for MoveCopyDestinationDialog -->
+    <string name="copy_move_file_destination_options_title">Select destination folder </string>
+
+    <!--  Values for FileRename dialog and layout values -->
+    <string name="rename_prompt">Enter new file name below </string>
+
+</resources>

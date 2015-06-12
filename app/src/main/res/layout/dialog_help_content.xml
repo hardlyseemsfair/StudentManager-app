@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutforPRICE"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/little_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Slightly Confused" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/lots_of_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Totally Lost" >
+        </TextView>
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/help_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:max="10" >
+    </SeekBar>
+    
+        <EditText
+        android:id="@+id/help_message"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:hint="Type any additional messages here..."
+        android:textSize="20sp" />
+    
+
+</LinearLayout>
