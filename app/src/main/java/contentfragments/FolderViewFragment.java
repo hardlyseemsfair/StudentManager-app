@@ -24,6 +24,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import com.classroom.applicationactivity.R;
 
@@ -74,7 +75,8 @@ public class FolderViewFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_folderview, container, false);
         dirPath = setDirPath(workingDir);
         String[] files = getFileNames();
-
+        TextView tv = (TextView) view.findViewById(R.id.foldertext);
+        tv.setText(workingDir);
         setGridView(view, files);
         return view;
     }

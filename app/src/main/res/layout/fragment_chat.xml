@@ -9,12 +9,12 @@
         android:id="@+id/chat_title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="2dp"
         android:layout_alignParentTop="true"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:text="TITLE"
         android:textSize="25sp"
-        android:textColor="#ffffffff"
-        android:background="#ffb3eadc" />
+        android:textColor="#ffffffff" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -25,10 +25,12 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:layout_above="@+id/bottom_write_bar"
             android:cacheColorHint="#00000000"
-            android:divider="#00000000"></ListView>
+            android:divider="#00000000"
+            android:background="#ffffffff"></ListView>
 
 
         <LinearLayout
@@ -44,20 +46,21 @@
                 android:layout_margin="5sp"
                 android:layout_weight="1"
                 android:hint="Write here"
-                android:padding="5sp" />
+                android:padding="5sp"
+                android:background="#ffe3e3e3" />
 
             <Button
                 android:id="@+id/chat_message_send"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_margin="5sp"
-                android:background="#ffcbcbcb"
+                android:background="@android:color/transparent"
                 android:paddingBottom="5sp"
                 android:paddingLeft="15sp"
                 android:paddingRight="15sp"
                 android:paddingTop="5sp"
                 android:text="Send"
-                android:textColor="#ff030303" />
+                android:textColor="#ffffff" />
         </LinearLayout>
     </RelativeLayout>
 
