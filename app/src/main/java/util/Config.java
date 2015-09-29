@@ -19,10 +19,13 @@ public class Config {
     /*
      * 											Server settings for the connect address of the php index and the remote user directories
      */
-    public static final String CONNECT_IP = "http://192.168.1.209:80/php_files/";
-    public static final String SERVER_USER_ROOT_DIR = "http://192.168.1.209:80/directorys/";
+//    public static final String CONNECT_IP = "http://192.168.1.209:80/php_files/";
+//    public static final String SERVER_USER_ROOT_DIR = "http://192.168.1.209:80/directorys/";
 //    public static final String CONNECT_IP = "localhost:80/php_files/";
 //    public static final String SERVER_USER_ROOT_DIR = "localhost:80/directorys/";
+
+    public static final String CONNECT_IP = "http://10.30.18.145:80/php_files/";
+    public static final String SERVER_USER_ROOT_DIR = "http://10.30.18.145:80/directorys/";
 
 
     /*
