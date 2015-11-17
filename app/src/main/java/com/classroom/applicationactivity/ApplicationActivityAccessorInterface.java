@@ -1,5 +1,7 @@
 package com.classroom.applicationactivity;
 
+import android.app.Activity;
+
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
@@ -19,6 +21,7 @@ public interface ApplicationActivityAccessorInterface {
     public ArrayList<String> getDirectories();
 
     public SessionLog getSessionLog();
+    public void hide_keyboard(Activity activity);
 
 
 

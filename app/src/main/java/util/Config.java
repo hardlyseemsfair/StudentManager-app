@@ -24,8 +24,8 @@ public class Config {
 //    public static final String CONNECT_IP = "localhost:80/php_files/";
 //    public static final String SERVER_USER_ROOT_DIR = "localhost:80/directorys/";
 
-    public static final String CONNECT_IP = "http://10.30.18.145:80/php_files/";
-    public static final String SERVER_USER_ROOT_DIR = "http://10.30.18.145:80/directorys/";
+    public static final String CONNECT_IP = "http://10.30.18.209:80/php_files/";
+    public static final String SERVER_USER_ROOT_DIR = "http://10.30.18.60:80/directorys/";
 
 
     /*
@@ -120,5 +120,7 @@ public class Config {
     public static String formatGroupNameDisplay(String s){
         return s.replaceAll("_", " ");
     }
-
+    public static String markupDirname (String s){
+        return s.replaceAll(" ", "_");
+    }
 }

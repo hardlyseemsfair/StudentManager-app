@@ -35,7 +35,7 @@ public class FileSelectedDialog extends DialogFragment {
     //Class tags
     private static final String OPEN_FILE = "open file";
     private static final String GET_HELP = "get help";
-    private static final String MOVE_FILE = "move or copy file";
+    private static final String MOVE_FILE = "send file...";
     private static final String RENAME_FILE = "rename file";
     private static final String DELETE_FILE = "delete";
 

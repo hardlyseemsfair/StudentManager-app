@@ -25,7 +25,7 @@
     <string-array name="file_select_dialog_options">
         <item>Open File</item>
         <item>Get Help</item>
-        <item>Move or Copy File</item>
+        <item>Send File...</item>
         <item>Rename File</item>
         <item>Delete</item>
     </string-array>

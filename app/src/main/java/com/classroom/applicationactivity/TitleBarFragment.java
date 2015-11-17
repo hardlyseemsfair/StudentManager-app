@@ -50,6 +50,7 @@ public class TitleBarFragment extends Fragment implements OnItemSelectedListener
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mCallback.hide_keyboard((Activity) mCallback);
                 mCallback.onMenuClick();
             }
         });

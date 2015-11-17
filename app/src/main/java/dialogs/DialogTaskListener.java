@@ -33,4 +33,5 @@ public interface DialogTaskListener extends ApplicationActivityAccessorInterface
     //Store opened file data
     public void storeFileInfo(FileData fd);
 
+    public void handleCameraDir(String destination);
 }

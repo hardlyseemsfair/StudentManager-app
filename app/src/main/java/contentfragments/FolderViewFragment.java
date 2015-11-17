@@ -76,7 +76,7 @@ public class FolderViewFragment extends Fragment {
         dirPath = setDirPath(workingDir);
         String[] files = getFileNames();
         TextView tv = (TextView) view.findViewById(R.id.foldertext);
-        tv.setText(workingDir);
+        tv.setText(Config.formatGroupNameDisplay(workingDir));
         setGridView(view, files);
         return view;
     }

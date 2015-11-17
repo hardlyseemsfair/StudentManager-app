@@ -91,6 +91,8 @@ public class ChatViewFragment extends Fragment {
     }
 
 
+
+
     /**
      * Set title of chat
      *

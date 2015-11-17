@@ -161,6 +161,9 @@ public class FileHandler {
         from.renameTo(to);
     }
 
+    public static void moveFile(File fromF, File toF){
+        fromF.renameTo(toF);
+    }
     /**
      * Renames a file
      * @param oldFilename the file to be renamed
